@@ -24,7 +24,7 @@ def get_scores_from_notion():
     for r in results:
         props = r["properties"]
         date_str = props.get("Date", {}).get("date", {}).get("start")
-        score_total = props.get("Score TOTAL", {}).get("number", 0)
+        score_total = props.get("Score TEST", {}).get("number", 0)
         if date_str:
             try:
                 date = datetime.fromisoformat(date_str)

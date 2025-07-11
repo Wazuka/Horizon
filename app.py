@@ -13,6 +13,8 @@ if data.empty:
     st.stop()
 
 data = data.sort_values("Date")
+data = data[data["Score TOTAL"].notna()]  # supprime les lignes sans score
+data["Score TOTAL"] = data["Score TOTAL"].astype(int)  # convertit en entier
 
 fig, ax = plt.subplots(figsize=(12, 4))
 colors = ["green" if score >= 15 else "#4682B4" for score in data["Score TOTAL"]]

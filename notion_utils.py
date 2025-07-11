@@ -28,7 +28,7 @@ def get_scores_from_notion():
         if date_str:
             try:
                 date = datetime.fromisoformat(date_str)
-                data.append({"Date": date, "Score TOTAL": score_total})
+                data.append({"Date": date, "Score TEST": score_total})
             except:
                 continue
 

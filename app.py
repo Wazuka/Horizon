@@ -23,6 +23,7 @@ st.write(data["Score TOTAL"].tolist())
 
 # Tri chronologique
 data = data.sort_values("Date")
+data["Score TOTAL"] = data["Score TEST"]  # 🔧 remplacement temporaire
 
 # Affichage du graphique (même si vide pour l’instant)
 fig, ax = plt.subplots(figsize=(12, 4))

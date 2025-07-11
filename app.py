@@ -28,7 +28,7 @@ data = data.sort_values("Date")
 fig, ax = plt.subplots(figsize=(12, 4))
 
 colors = ["green" if score >= 15 else "#4682B4" for score in data["Score TEST"]]
-bars = ax.bar(data["Date"].dt.strftime("%d/%m"), data["Score TOTAL"], color=colors)
+bars = ax.bar(data["Date"].dt.strftime("%d/%m"), data["Score TEST"], color=colors)
 
 # Ligne objectif et base
 ax.axhline(y=15, color="gray", linestyle="--", linewidth=1)

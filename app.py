@@ -19,7 +19,7 @@ st.write(data)
 
 # 🔍 Diagnostic – Affiche juste la colonne des scores
 st.write("📊 Scores extraits :")
-st.write(data["Score TOTAL"].tolist())
+st.write(data["Score TEST"].tolist())
 
 # Tri chronologique
 data = data.sort_values("Date")
